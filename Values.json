@@ -2,7 +2,6 @@
     "ContainerTypes" :{
         "ContainerAppData" : {
             "ClientSecret": "",
-            "RootSiteUrl": "",
             "ClientId": "",
             "CertThumbprint": "",
             "CertPrivateKey": "",
@@ -11,7 +10,6 @@
     },
     "TenantData":{
         "TenantId": "",
-        "TenantName": "",
-        "RootSiteUrl": ""
+        "TenantName": ""
     }
 }
