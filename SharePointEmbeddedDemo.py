@@ -48,8 +48,7 @@ class MenuState(str, Enum):
     EXIT = "Exit"
 
 class ContainerTypes(str, Enum):
-    PaidContainerAppData = "Paid Container Type"
-    FreeContainerAppData = "Free Container Type"
+    ContainerAppData = "ContainerApp"
 
 class Container:
     def __init__(self):
