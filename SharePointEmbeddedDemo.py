@@ -79,6 +79,7 @@ class Root:
         if  (string == ""):
             string =  "root"
         return string
+        
     def get_root_id(self):
         #return root path as string
         if (len(self.root) < 1):
@@ -175,7 +176,15 @@ class Application():
         root = self.root.get_root_id()
         url = f"https://graph.microsoft.com/v1.0/drives/{self.selectedContainer.Id}/items/{root}/children"
         print(url)
-        response = self.send_request(url, Method.GET).json()
+        response = self.send_request(url, Method.GET)
+        try:
+            response = response.json()
+        except:
+            print(response.text)
+            print(response.headers)
+            input("Press Enter to Continue...")
+            return None
+        
         if (not silence):
             print(json.dumps(response, indent=4, sort_keys=True))
             input("Press Enter to Continue...")
